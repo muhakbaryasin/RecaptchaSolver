@@ -1,0 +1,2 @@
+class BotDetectedException(Exception):
+    pass
