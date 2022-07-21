@@ -8,8 +8,7 @@ import urllib
 from speech_recognition import Recognizer, AudioFile
 import os
 from time import sleep
-
-from BotDetectedException import BotDetectedException
+from models.BotDetectedException import BotDetectedException
 
 
 class RecaptchaSolver(object):

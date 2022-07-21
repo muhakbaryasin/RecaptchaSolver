@@ -1,6 +1,6 @@
 from seleniumwire import webdriver
 from selenium.webdriver.common.by import By
-from RecaptchaSolver import RecaptchaSolver
+from models.RecaptchaSolver import RecaptchaSolver
 from time import sleep
 
 
@@ -12,4 +12,10 @@ if __name__ == "__main__":
 
 	button_submit = driver.find_element(By.XPATH, '//*[@id="recaptcha-demo-submit"]')
 	button_submit.click()
-	sleep(120)
+
+	try:
+		sleep(120)
+	except KeyboardInterrupt:
+		driver.quit()
+
+	driver.quit()
